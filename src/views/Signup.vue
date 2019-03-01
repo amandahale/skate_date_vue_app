@@ -9,6 +9,7 @@
         <div class="form-group">
           <label>Name:</label> 
           <input type="text" class="form-control" v-model="name">
+         remaining</span>
         </div>
         <div class="form-group">
           <label>Email:</label>
@@ -21,12 +22,15 @@
         <div class="form-group">
           <label>Password confirmation:</label>
           <input type="password" class="form-control" v-model="passwordConfirmation">
+          <span v-if="passwordConfirmation.length > 0 && passwordConfirmation !== password" class="text-danger">Must match password</span>
         </div>
         <input type="submit" class="btn btn-primary" value="Submit">
       </form>
     </div>
   </div>
 </template>
+
+<!-- CONSOLE IS RETURNING A 500 SERVER ERROR @ http://localhost:3000/api/users/1, BUT STILL CREATING AN ACCOUNT ON CLICK??? -->
 
 <script>
 import axios from "axios";
