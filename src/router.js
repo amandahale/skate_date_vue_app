@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import LocationsIndex from './views/LocationsIndex.vue'
 import LocationsNew from './views/LocationsNew.vue'
+import Signup from "./views/Signup.vue"
+import Login from "./views/Login.vue"
+import Logout from "./views/Logout.vue"
 
 Vue.use(Router)
 
@@ -27,5 +30,20 @@ export default new Router({
       name: 'locations-new',
       component: LocationsNew
     },
+    { 
+      path: "/signup", 
+      name: "signup", 
+      component: Signup 
+    },
+    { 
+      path: "/login", 
+      name: "login", 
+      component: Login 
+    },
+    { 
+      path: "/logout", 
+      name: "logout", 
+      component: Logout 
+    }
   ]
 })
