@@ -10,6 +10,8 @@
 
   <router-link to="/">Back to all locations</router-link><br>
 
+  <button v-if="location.favorite_id" v-on:click="unfavoriteLocation()">Unfavorite</button>
+  <button v-else v-on:click="favoriteLocation()">Favorite</button>
   <button v-on:click="destroyLocation()">Delete</button>
 
   </div>
@@ -37,6 +39,33 @@ export default {
         console.log("Successfully Removed Location", response.data);
         this.$router.push("/");
       });
+    },
+    favoriteLocation: function() {
+      var params = {
+        location_id: this.location.id
+      };
+      axios
+        .post("/api/favorites", params)
+        .then(response => {
+          console.log(response.data);
+          this.location.favorite_id = response.data.id;
+        })
+        .catch(error => {
+          console.log(error.response.data);
+          // this.errors = error.response.data.errors;
+        });
+    },
+    unfavoriteLocation: function() {
+      axios
+        .delete("/api/favorites/" + this.location.favorite_id)
+        .then(response => {
+          console.log(response.data);
+          this.location.favorite_id = "";
+        })
+        .catch(error => {
+          console.log(error.response.data);
+          // this.errors = error.response.data.errors;
+        });
     }
   }
 };

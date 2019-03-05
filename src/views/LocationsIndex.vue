@@ -3,7 +3,9 @@
     <div id='map'></div>
     <h1>All Locations</h1>
     <div v-for="location in locations">
+      <router-link v-bind:to=" '/locations/' + location.id">
       <h2>{{ location.name }}</h2>
+    </router-link>
       <img v-bind:src="location.image_url">
       <p>{{ location.address }}</p>
       <p>{{ location.weblink }}</p>

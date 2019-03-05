@@ -33,3 +33,22 @@
   color: #42b983;
 }
 </style>
+
+
+<script>
+var axios = require("axios");
+
+export default {
+  data: function() {
+    return {
+      user: {}
+    };
+  },
+  created: function() {
+    // axios.get("/api/users/" + localStorage.getItem("user_id")).then(response => {
+    //   console.log(response.data);
+    //   this.user = response.data;
+    // });
+  }
+};
+</script>
