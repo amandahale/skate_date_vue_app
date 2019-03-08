@@ -1,15 +1,16 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Signup from "./views/Signup.vue"
-import Login from "./views/Login.vue"
-import Logout from "./views/Logout.vue"
-import LocationsIndex from './views/LocationsIndex.vue'
-import LocationsShow from './views/LocationsShow.vue'
-import LocationsNew from './views/LocationsNew.vue'
-import LocationsEdit from './views/LocationsEdit.vue'
+import Vue from 'vue';
+import Router from 'vue-router';
+import Signup from "./views/Signup.vue";
+import Login from "./views/Login.vue";
+import Logout from "./views/Logout.vue";
+import LocationsIndex from './views/LocationsIndex.vue';
+import LocationsShow from './views/LocationsShow.vue';
+import LocationsNew from './views/LocationsNew.vue';
+import LocationsEdit from './views/LocationsEdit.vue';
+import UsersShow from './views/UsersShow.vue';
 
 
-Vue.use(Router)
+Vue.use(Router);
 
 export default new Router({
   mode: 'history',
@@ -34,6 +35,11 @@ export default new Router({
       path: "/logout", 
       name: "logout", 
       component: Logout 
+    },    
+    {
+      path: '/locations/new',
+      name: 'locations-new',
+      component: LocationsNew
     },
     {
       path: '/locations/:id',
@@ -41,15 +47,15 @@ export default new Router({
       component: LocationsShow
     },
     {
-      path: '/locations/new',
-      name: 'locations-new',
-      component: LocationsNew
-    },
-    {
       path: '/locations/:id/edit',
       name: 'locations-edit',
       component: LocationsEdit
     },
+    {
+      path: '/users/:id',
+      name: 'users-show',
+      component: UsersShow
+    },
 
   ]
-})
+});

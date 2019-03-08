@@ -36,11 +36,7 @@ export default {
       status: ""
     };
   },
-  created: function() {
-    axios.get("/api/locations").then(response => {
-      this.locations = response.data;
-    });
-  },
+  created: function() {},
   methods: {
     submit: function() {
       var locationParams = {
