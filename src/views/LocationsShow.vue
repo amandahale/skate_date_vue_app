@@ -1,5 +1,6 @@
 <template>
   <div class="locations-show">
+    <div id='map'></div>
 
   <h2>{{ location.name }}</h2>
   <img :src="location.image_url" :alt="location.name">
@@ -28,11 +29,59 @@ export default {
     };
   },
   created: function() {
-    axios.get("/api/locations/" + this.$route.params.id).then(response => {
-      console.log(response.data);
-      this.location = response.data;
-    });
+    axios
+      .get("/api/locations/" + this.$route.params.id)
+      .then(response => {
+        // console.log(response.data);
+        this.location = response.data;
+      })
+      .then(() => {
+        mapboxgl.accessToken =
+          "pk.eyJ1IjoiYXd3LWhhbGUtbmFoIiwiYSI6ImNqc293em84azAyaTU0M3A2bWJtZGEwNTIifQ.TuzMm3FyjpufA_WOlHkqNA";
+
+        var mapboxClient = mapboxSdk({ accessToken: mapboxgl.accessToken });
+        console.log(this.location);
+
+        mapboxClient.geocoding
+          .forwardGeocode({
+            query: this.location.address,
+            autocomplete: false,
+            limit: 1
+          })
+          .send()
+          .then(function(response) {
+            if (response && response.body && response.body.features && response.body.features.length) {
+              var feature = response.body.features[0];
+
+              var map = new mapboxgl.Map({
+                container: "map",
+                style: "mapbox://styles/mapbox/streets-v9",
+                center: feature.center,
+                zoom: 10
+              });
+              new mapboxgl.Marker().setLngLat(feature.center).addTo(map);
+            }
+          });
+      });
   },
+
+  mounted: function() {
+    // var laBodega = [-87.649995, 41.917039];
+    // var map = new mapboxgl.Map({
+    //   container: "map", // container id
+    //   style: "mapbox://styles/mapbox/streets-v9", // stylesheet location
+    //   center: laBodega, // starting position [lng, lat]
+    //   zoom: 9 // starting zoom
+    // });
+    // // create the popup
+    // var popup = new mapboxgl.Popup({ offset: 25 }).setText("La Bodega");
+    // // create the marker
+    // new mapboxgl.Marker()
+    //   .setLngLat([-87.649995, 41.917039])
+    //   .setPopup(popup) // sets a popup on this marker
+    //   .addTo(map);
+  },
+
   methods: {
     destroyLocation: function() {
       axios.delete("api/locations/" + this.location.id).then(response => {

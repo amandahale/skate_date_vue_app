@@ -50,6 +50,7 @@ export default {
       this.location = response.data;
     });
   },
+
   methods: {
     submit: function(location) {
       var locationParams = {
