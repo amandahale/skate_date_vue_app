@@ -9,7 +9,7 @@
         <div class="form-group">
           <label>Name:</label> 
           <input type="text" class="form-control" v-model="name">
-         remaining</span>
+         </span>
         </div>
         <div class="form-group">
           <label>Email:</label>
