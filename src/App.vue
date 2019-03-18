@@ -3,9 +3,13 @@
     <div id="nav">
       <router-link to="/">Locations</router-link> |
       <router-link to="/locations/new">Create Location</router-link> | 
-      <router-link to="/signup">Signup</router-link> | 
-      <router-link to="/login">Login</router-link> |
-      <router-link to="/logout">Logout</router-link>
+      <span v-if= "isLoggedIn()">
+        <router-link to="/logout">Logout</router-link> |
+      </span>
+      <span v-if="!isLoggedIn()">
+        <router-link to="/login">Login</router-link> |
+        <router-link to="/signup">Signup</router-link> | 
+      </span>
 
     </div>
     <router-view/>
@@ -49,6 +53,14 @@ export default {
     //   console.log(response.data);
     //   this.user = response.data;
     // });
+  },
+  methods: {
+    isLoggedIn: function() {
+      if (localStorage.getItem("jwt")) {
+        return true;
+      }
+      return false;
+    }
   }
 };
 </script>
