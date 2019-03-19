@@ -1,41 +1,30 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Locations</router-link> |
-      <router-link to="/locations/new">Create Location</router-link> | 
-      <span v-if= "isLoggedIn()">
-        <router-link to="/logout">Logout</router-link> |
-      </span>
-      <span v-if="!isLoggedIn()">
-        <router-link to="/login">Login</router-link> |
-        <router-link to="/signup">Signup</router-link> | 
-      </span>
 
+    <div class="header-top custom">
+        <div class="container-fluid">
+            <ul class="top-menu hidden-xs pull-right">
+                <li class="active"><a href="#">Home</a></li>
+                <li><router-link to="/">Locations</router-link></li>
+                <li><router-link to="/locations/new">Create Location</router-link></li>
+                <li v-if= "isLoggedIn()"><router-link to="/logout">Logout</router-link> </li>
+                <li v-else><router-link to="/login">Login</router-link> </li>
+                <li v-if= "!isLoggedIn()"><router-link to="/signup">Signup</router-link></li>
+            </ul>
+
+            <div class="social-icons pull-left">
+               <router-link to="/" class="social-icon"> Skate Date</router-link>
+            </div><!-- End .social-icons -->
+        </div><!-- End .container-fluid -->
     </div>
+
+
+
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /*  text-align: center;*/
-  color: #2c3e50;
-}
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
 
 

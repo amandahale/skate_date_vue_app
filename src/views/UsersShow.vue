@@ -38,7 +38,7 @@
 </router-link>
   <img v-bind:src="location.image_url">
   <p>{{ location.address }}</p>
-  <p>{{ location.weblink }}</p>
+  <a :href="location.weblink">{{location.weblink}}</a><br>
 </div>
 
   

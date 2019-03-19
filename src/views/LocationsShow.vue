@@ -5,7 +5,8 @@
   <h2>{{ location.name }}</h2>
   <img :src="location.image_url" :alt="location.name">
   <p>{{location.address}}</p>
-  <p>{{location.weblink}}</p>
+ <!--  <p>{{location.weblink}}</p> -->
+ <a :href="location.weblink">{{location.weblink}}</a><br>
 
   <router-link v-bind:to="'/locations/' + location.id + '/edit'">Edit Location</router-link><br>
 
