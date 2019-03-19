@@ -1,9 +1,15 @@
 <template>
   <div class="locations-index">
 
-    <div class="page-header largest parallax custom text-center" style="background-image:url(assets/images/page-header-bg.jpg)" data-0="background-position:50% 50%;" data-top-bottom="background-position:50% 100%">
+    <div class="page-header largest parallax custom text-center" style="background-image:url(https://scontent-ort2-2.xx.fbcdn.net/v/t1.0-9/53541694_10156181506858339_4155514097355456512_n.jpg?_nc_cat=100&_nc_ht=scontent-ort2-2.xx&oh=c00132faf1fdb8dc3b44ded392046aea&oe=5D089B4C)" data-0="background-position:50% 50%;" data-top-bottom="background-position:50% 100%">
       <div class="container-fluid">
-        <h1>Elements <small>(Header 3)</small></h1>
+        <h1>Skate Date</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
       </div><!-- End .container -->
     </div><!-- End .page-header -->
 

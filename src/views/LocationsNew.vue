@@ -2,21 +2,30 @@
   <div class="locations-new">
     <h2>Add A Location</h2>
     <form v-on:submit.prevent="submit()">
-      <div>
-        Name: <input type="text" class="form-control" v-model="newLocationName">
+      <br><br><br><br><br><br>
+
+      <div class="form-group input-group">
+        <span class="input-group-addon">Name</span>
+        <input type="text" v-model="newLocationName" class="form-control" placeholder="Location Name">
       </div>
-      <div>
-        Address: <input type="text" class="form-control" v-model="newLocationAddress">
+
+      <div class="form-group input-group">
+        <span class="input-group-addon">Location Address</span>
+        <input type="text" v-model="newLocationAddress" class="form-control" placeholder="Location Address">
       </div>
-      <div>
-        Weblink: <input type="text" class="form-control" v-model="newLocationWeblink">
-      </div>      
-      <div>
-        Image Url: <input type="text" class="form-control" v-model="newLocationImageUrl">
+
+      <div class="form-group input-group">
+        <span class="input-group-addon">Weblink</span>
+        <input type="text" v-model="newLocationWeblink" class="form-control" placeholder="Location Weblink">
+      </div>
+
+      <div class="form-group input-group">
+        <span class="input-group-addon">Image</span>
+        <input type="text" v-model="newLocationImageUrl" class="form-control" placeholder="Location Image Url">
       </div>
 
       <div>
-        <input type="submit" value="Create">
+        <input type="submit" class="btn btn-black" value="Submit">
       </div>
     </form>
   </div>

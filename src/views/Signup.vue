@@ -2,29 +2,32 @@
   <div class="signup">
     <div class="container">
       <form v-on:submit.prevent="submit()">
+        <br><br><br><br><br><br>
         <h1>Signup</h1>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
-        <div class="form-group">
-          <label>Name:</label> 
-          <input type="text" class="form-control" v-model="name">
-         </span>
+        <div class="form-group input-group">
+          <span class="input-group-addon">Name</span>
+          <input type="name" v-model="name" class="form-control" placeholder="Your Name">
         </div>
-        <div class="form-group">
-          <label>Email:</label>
-          <input type="email" class="form-control" v-model="email">
+
+        <div class="form-group input-group">
+          <span class="input-group-addon">Email</span>
+          <input type="email" v-model="email" class="form-control" placeholder="Your Email">
         </div>
-        <div class="form-group">
-          <label>Password:</label>
-          <input type="password" class="form-control" v-model="password">
+
+        <div class="form-group input-group">
+          <span class="input-group-addon">Password</span>
+          <input type="password" v-model="password" class="form-control" placeholder="Your Password">
         </div>
-        <div class="form-group">
-          <label>Password confirmation:</label>
-          <input type="password" class="form-control" v-model="passwordConfirmation">
+
+        <div class="form-group input-group">
+          <span class="input-group-addon">Password confirmation:</span>
+          <input type="password" v-model="passwordConfirmation" class="form-control" placeholder="Confirm Password">
           <span v-if="passwordConfirmation.length > 0 && passwordConfirmation !== password" class="text-danger">Must match password</span>
         </div>
-        <input type="submit" class="btn btn-primary" value="Submit">
+        <input type="submit" class="btn btn-black" value="Submit">
       </form>
     </div>
   </div>
