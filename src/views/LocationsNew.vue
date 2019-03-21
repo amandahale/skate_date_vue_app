@@ -1,8 +1,12 @@
 <template>
   <div class="locations-new">
-    <h2>Add A Location</h2>
+
     <form v-on:submit.prevent="submit()">
       <br><br><br><br><br><br>
+
+      <header class="title-block text-right">
+          <h2 class="title text-right custom"><span class="light text-custom">Create A</span> New Location<small></small></h2>
+      </header>
 
       <div class="form-group input-group">
         <span class="input-group-addon">Name</span>

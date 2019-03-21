@@ -5,9 +5,7 @@
       <div class="header-top custom">
         <div class="container-fluid">
           <ul class="top-menu hidden-xs pull-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><router-link to="/">Locations</router-link></li>
-            <li><router-link to="/locations/new">Create Location</router-link></li>
+            <li class="active"></li>
             <li v-if= "isLoggedIn()"><router-link to="/logout">Logout</router-link> </li>
             <li v-else><router-link to="/login">Login</router-link> </li>
             <li v-if= "!isLoggedIn()"><router-link to="/signup">Signup</router-link></li>
@@ -22,7 +20,7 @@
       <div class="header-inner">
         <div class="container-fluid">
           <a href="index.html" class="site-logo" title="Bold - Multipurpose Template">
-            <img src="assets/images/logo.png" data-rjs="3" alt="Bold Logo">
+            
             <span class="sr-only">Bold</span>
           </a>
 
@@ -38,117 +36,17 @@
 
           <div class="collapse navbar-collapse" id="main-nav-container">
             <ul class="nav navbar-nav">
-              <li class="dropdown active">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Home<span class="angle"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Business<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="index.html">Business - Version 1</a></li>
-                      <li><a href="index2.html">Business - Version 2</a></li>
-                      <li><a href="index3.html">Business - Version 3</a></li>
-                      <li><a href="index4.html">Business - Version 4</a></li>
-                      <li><a href="index5.html">Business - Version 5</a></li>
-                      <li><a href="index6.html">Business - Version 6</a></li>
-                      <li><a href="index7.html">Business - Version 7</a></li>
-                      <li><a href="index8.html">Business - Version 8</a></li>
-                      <li><a href="index9.html">Business - Version 9</a></li>
-                      <li><a href="index10.html">Business - Version 10</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Shop<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="index-shop.html">Shop - Version 1</a></li>
-                      <li><a href="index-shop2.html">Shop - Version 2</a></li>
-                      <li><a href="index-shop3.html">Shop - Version 3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Blog<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="index-blog.html">Blog - Version 1</a></li>
-                      <li><a href="index-blog2.html">Blog - Version 2</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Portfolio<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="index-portfolio.html">Portfolio - Version 1</a></li>
-                      <li><a href="index-portfolio2.html">Portfolio - Version 2</a></li>
-                      <li><a href="index-portfolio3.html">Portfolio - Version 3</a></li>
-                      <li><a href="index-portfolio4.html">Portfolio - Version 4</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Photography<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="index-photography.html">Photography - Version 1</a></li>
-                      <li><a href="index-photography2.html">Photography - Version 2</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Onepages<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="index-onepage.html">Onepage - Version 1</a></li>
-                      <li><a href="index-onepage2.html">Onepage - Version 2</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
+
               <li class="dropdown reverse">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elements<span class="angle"></span></a>
+                <a href="" class="sticky-header dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Get Low<span class="angle"></span></a>
                 <ul class="dropdown-menu" role="menu">
                   <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elements - Headers<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="header.html">Header Version 1</a></li>
-                      <li><a href="header2.html">Header Version 2</a></li>
-                      <li><a href="header3.html">Header Version 3</a></li>
-                      <li><a href="header4.html">Header Version 4</a></li>
-                      <li><a href="header5.html">Header Version 5</a></li>
-                      <li><a href="header6.html">Header Version 6</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elements - Headers<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="header7.html">Header Version 7</a></li>
-                      <li><a href="header8.html">Header Version 8</a></li>
-                      <li><a href="header9.html">Header Version 9</a></li>
-                      <li><a href="header10.html">Header Version 10</a></li>
-                      <li><a href="header11.html">Header Version 11</a></li>
-                      <li><a href="header12.html">Header Version 12</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="elements-footers.html">Elements - Footers</a></li>
-                  <li><a href="elements-footers-white.html">Footers - White</a></li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elements<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="elements-pageheaders.html">Elements - Page Headers</a></li>
-                      <li><a href="elements-typography.html">Elements - Typography</a></li>
-                      <li><a href="elements-titles.html">Elements - Titles</a></li>
-                      <li><a href="elements-buttons.html">Elements - Buttons</a></li>
-                      <li><a href="elements-services.html">Elements - Services</a></li>
-                      <li><a href="elements-forms.html">Elements - Forms</a></li>
-                      <li><a href="elements-counters.html">Elements - Counters</a></li>
-                      <li><a href="elements-collapses.html">Elements - Collapses</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Elements<span class="angle"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                      <li><a href="elements-callouts.html">Elements - Callouts</a></li>
-                      <li><a href="elements-text-blocks.html">Elements - Blocks</a></li>
-                      <li><a href="elements-tabs.html">Elements - Tabs</a></li>
-                      <li><a href="elements-progressbars.html">Elements - Progress bars</a></li>
-                      <li><a href="elements-tables.html">Elements - Tables</a></li>
-                      <li><a href="elements-alerts.html">Elements - Alerts</a></li>
-                      <li><a href="elements-media.html">Elements - Media</a></li>
-                      <li><a href="elements-more.html">Elements - More</a></li>
-                    </ul>
-                  </li>
+                    
+                  <li><router-link to="/users/me">Your Dash</router-link></li>
+                  <li><router-link to="/">Locations</router-link></li>
+                  <li><router-link to="/locations/new">Add a Location</router-link></li>
+
+
                 </ul>
               </li>
               <li class="dropdown pull-right">

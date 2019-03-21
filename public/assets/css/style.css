@@ -5861,7 +5861,6 @@ Animations - add these clases to the parent element - Navbar Or dropdown
   top: 0;
   right: 0;
   z-index: 999;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.13);
 }
 
 .header.header2.transparent.half {
