@@ -2,19 +2,19 @@
   <div class="locations-show">
     <div id='map'></div>
 
-  <h2>{{ location.name }}</h2>
-  <img :src="location.image_url" :alt="location.name">
-  <p>{{location.address}}</p>
- <!--  <p>{{location.weblink}}</p> -->
- <a :href="location.weblink">{{location.weblink}}</a><br>
+    <h2>{{ location.name }}</h2>
+    <img :src="location.image_url" :alt="location.name">
+    <p>{{location.address}}</p>
+    <!--  <p>{{location.weblink}}</p> -->
+    <a :href="location.weblink">{{location.weblink}}</a><br>
 
-  <router-link v-bind:to="'/locations/' + location.id + '/edit'">Edit Location</router-link><br>
+    <router-link v-bind:to="'/locations/' + location.id + '/edit'">Edit Location</router-link><br>
 
-  <router-link to="/">Back to all locations</router-link><br>
+    <router-link to="/">Back to all locations</router-link><br>
 
-  <button v-if="location.favorite_id" v-on:click="unfavoriteLocation()">Unfavorite</button>
-  <button v-else v-on:click="favoriteLocation()">Favorite</button>
-  <button v-on:click="destroyLocation()">Delete</button>
+    <button v-if="location.favorite_id" v-on:click="unfavoriteLocation()">Unfavorite</button>
+    <button v-else v-on:click="favoriteLocation()">Favorite</button>
+    <button v-on:click="destroyLocation()">Delete</button>
 
   </div>
 </template>
