@@ -2,7 +2,7 @@
   <div class="users-show container-fluid">
     <div class="container">
 
-      <img v-if="isLoggedIn()" v-bind:src="'https://http.cat/' + status" alt="">
+<!--       <img v-if="isLoggedIn()" v-bind:src="'https://http.cat/' + status" alt=""> -->
 
       <ul>
         <li v-for="error in errors">{{ error }}</li>

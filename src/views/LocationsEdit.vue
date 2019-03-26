@@ -3,6 +3,9 @@
     <div class="table-row">
         <div class="table-cell cell-content bg-custom">
             <div>
+              <div class="container text-right">
+
+              </div><!-- End .container -->
                 <div class="col-xs-12">
                     <h2 class="title-border gray text-white">Edit a Location</h2>
 
@@ -34,7 +37,7 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <label>Description</label>
-                                <textarea class="form-control" rows="6" id="contactmessage" name="contactmessage" placeholder="Tell us about your spot"></textarea>
+                                <textarea class="form-control" rows="6" placeholder="Tell us about your spot"></textarea>
                             </div><!-- End .col-md-12 -->
                         </div><!-- End .row -->
 
@@ -52,46 +55,6 @@
             <div id="map" class="cell-map"></div><!-- End #map -->
         </div><!-- End .table-cell -->
     </div><!-- End .table-row -->
-
-
-<!--     <img v-if="status" v-bind:src="'https://http.cat/' + status" alt="">
-    <br><br><br><br><br><br>
-    <header class="title-block text-right">
-        <h2 class="title text-right custom"><span class="light text-custom">Edit A</span> Location<small></small></h2>
-    </header>
-
-    <ul>
-      <li v-for="error in errors">{{ error }}</li>
-    </ul>
-
-    <form v-on:submit.prevent="submit()">
-      
-      <div class="form-group input-group">
-        <span class="input-group-addon">Name</span> 
-        <input type="name" class="form-control" v-model="location.name">
-      </div>
-
-      <div class="form-group input-group col-sm-6">
-        <span class="input-group-addon">Address</span> 
-        <input type="address" class="form-control" v-model="location.address">
-      </div>
-
-      <div class="form-group input-group col-sm-6">
-        <span class="input-group-addon">Weblink</span> 
-        <input type="weblink" class="form-control" v-model="location.weblink">
-      </div>
-
-      <div class="form-group input-group col-sm-6">
-        <span class="input-group-addon">Image Url</span> 
-        <input type="image_url" class="form-control" v-model="location.image_url">
-      </div>
-
-      <div>
-        <input type="submit" class="btn btn-black" value="Submit">
-      </div>
-
-    </form> -->
-
   </div>
 </template>
 

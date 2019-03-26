@@ -11,9 +11,7 @@
             <li v-if= "!isLoggedIn()"><router-link to="/signup">Signup</router-link></li>
           </ul>
 
-          <div class="social-icons pull-left">
-            <router-link to="/" class="social-icon"> Skate Date</router-link>
-          </div><!-- End .social-icons -->
+
         </div><!-- End .container-fluid -->
       </div>
 
@@ -21,6 +19,9 @@
         <div class="container-fluid">
           <a href="index.html" class="site-logo" title="Bold - Multipurpose Template">
             
+            <div class="pull-left">
+              <router-link to="/"> Skate Date</router-link>
+            </div><!-- End .social-icons -->
             <span class="sr-only">Bold</span>
           </a>
 

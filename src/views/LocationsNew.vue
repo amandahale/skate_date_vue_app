@@ -28,6 +28,11 @@
         <input type="text" v-model="newLocationImageUrl" class="form-control" placeholder="Location Image Url">
       </div>
 
+      <div class="form-group input-group">
+        <span class="input-group-addon">Location Description</span>
+        <input type="text" v-model="newLocationDescription" class="form-control" placeholder="Location Description">
+      </div>
+
       <div>
         <input type="submit" class="btn btn-black" value="Submit">
       </div>
@@ -45,6 +50,7 @@ export default {
       newLocationAddress: "",
       newLocationWeblink: "",
       newLocationImageUrl: "",
+      newLocationDescription: "",
       errors: [],
       status: ""
     };
@@ -56,7 +62,8 @@ export default {
         name: this.newLocationName,
         address: this.newLocationAddress,
         weblink: this.newLocationWeblink,
-        image_url: this.newLocationImageUrl
+        image_url: this.newLocationImageUrl,
+        description: this.newLocationDescription
       };
       axios
         .post("api/locations", locationParams)
