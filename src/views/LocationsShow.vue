@@ -74,7 +74,7 @@
                             <i class="fa fa-wifi"></i>
                         </div><!-- End .service-icon -->
                         <h3 class="service-title text-white"><a href="#">Website</a></h3>
-                        <p>{{location.weblink}}</p>
+                        <p><a class="text-white" :href="location.weblink">{{location.weblink}}</a></p>
                     </div><!-- End .service -->
                 </div><!-- End .col-sm-6 -->
 

@@ -4,11 +4,18 @@
 
 <!--       <img v-if="isLoggedIn()" v-bind:src="'https://http.cat/' + status" alt=""> -->
 
+<div class="page-header custom2 text-center larger">
+  <div class="container-fluid">
+    <h1>Hi, {{user.name}}</h1>
+    <h4>ready to shred?</h4>
+  </div><!-- End .container -->
+</div><!-- End .page-header -->
+
       <ul>
         <li v-for="error in errors">{{ error }}</li>
       </ul>
     <form v-on:submit.prevent="submit()">
-      <br><br><br><br><br><br>
+      <br><br>
 
         <header class="title-block text-right">
             <h2 class="title text-right custom"><span class="light text-custom">Update</span> Your Info <small></small></h2>
@@ -79,6 +86,13 @@
   </div>
 </template>
 
+<style scoped>
+.page-header.custom2.text-center {
+  margin: 0px;
+  max-width: 100%;
+  height: auto;
+}
+</style>
 
 <script>
 var axios = require("axios");

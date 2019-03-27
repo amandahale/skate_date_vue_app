@@ -1,11 +1,9 @@
 <template>
   <div class="locations-edit">
-    <div class="table-row">
+    <div class="table-row page-header custom text-center largest">
         <div class="table-cell cell-content bg-custom">
             <div>
-              <div class="container text-right">
-
-              </div><!-- End .container -->
+            
                 <div class="col-xs-12">
                     <h2 class="title-border gray text-white">Edit a Location</h2>
 
