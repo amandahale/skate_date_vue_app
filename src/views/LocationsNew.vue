@@ -1,9 +1,13 @@
 <template>
   <div class="locations-new">
 
-    <form v-on:submit.prevent="submit()">
-      <br><br><br><br><br><br>
+    <div class="page-header custom text-center larger">
+      <div class="container-fluid">
+      </div><!-- End .container -->
+    </div><!-- End .page-header -->
 
+    <form v-on:submit.prevent="submit()">
+    <div class="container">
       <header class="title-block text-right">
           <h2 class="title text-right custom"><span class="light text-custom">Create A</span> New Location<small></small></h2>
       </header>
@@ -35,6 +39,7 @@
 
       <div>
         <input type="submit" class="btn btn-black" value="Submit">
+      </div>
       </div>
     </form>
   </div>

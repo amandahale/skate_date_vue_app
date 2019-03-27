@@ -1,12 +1,23 @@
 <template>
   <div class="login">
+
+    <div class="page-header custom text-center larger">
+      <div class="container-fluid">
+        <h1>Lace up,</h1>
+        <h4>     let's go!</h4>
+      </div><!-- End .container -->
+    </div><!-- End .page-header -->
+
     <div class="container">
+
+
+
       <form v-on:submit.prevent="submit()">
         <label class="input-desc"> Sign In</label>
         <ul>
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
         </ul>
-        <br><br><br><br><br><br><br>
+        <br>
         <div class="form-group input-group">
           <span class="input-group-addon">Email</span>
           <input type="email" v-model="email" class="form-control" placeholder="Your Email">
@@ -50,7 +61,7 @@ export default {
         .then(response => {
           axios.defaults.headers.common["Authorization"] = "Bearer " + response.data.jwt;
           localStorage.setItem("jwt", response.data.jwt);
-          this.$router.push("/");
+          this.$router.push("/users/me");
         })
         .catch(error => {
           this.errors = ["Invalid email or password."];

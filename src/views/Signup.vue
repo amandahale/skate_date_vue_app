@@ -1,12 +1,16 @@
 <template>
   <div class="signup">
-    <div class="container">
+      <div class="page-header larger custom2 text-center">
+          <div class="container-fluid">
+              <h1><small>Sign Up</small></h1>
+          </div><!-- End .container -->
+      </div><!-- End .page-header -->
+      <div class="container">
+
+
       <form v-on:submit.prevent="submit()">
-        <br><br><br><br><br><br>
-        <h1>Signup</h1>
-        <ul>
+        
           <li class="text-danger" v-for="error in errors">{{ error }}</li>
-        </ul>
         <div class="form-group input-group">
           <span class="input-group-addon">Name</span>
           <input type="name" v-model="name" class="form-control" placeholder="Your Name">

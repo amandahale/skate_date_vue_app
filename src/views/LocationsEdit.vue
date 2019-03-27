@@ -1,57 +1,57 @@
 <template>
   <div class="locations-edit">
     <div class="table-row page-header custom text-center largest">
-        <div class="table-cell cell-content bg-custom">
-            <div>
-            
-                <div class="col-xs-12">
-                    <h2 class="title-border gray text-white">Edit a Location</h2>
+      <div class="table-cell cell-content bg-custom">
+        <div>
+          <div class="col-xs-12">
+              <h2 class="title-border gray text-white">Edit a Location</h2>
 
-                    <form v-on:submit.prevent="submit()">
-                        <div class="row row-sm">
-                            <div class="col-sm-6">
-                                <label>Name</label>
-                                <input type="name" class="form-control" v-model="location.name" required>
-                            </div><!-- End .col-sm-6 -->
+              <form v-on:submit.prevent="submit()">
+                
+                <div class="row row-sm">
+                  <div class="col-sm-6">
+                    <label>Name</label>
+                      <input type="name" class="form-control" v-model="location.name" required>
+                  </div><!-- End .col-sm-6 -->
 
-                            <div class="col-sm-6">
-                                <label>Address</label>
-                                <input type="name" class="form-control" v-model="location.address" required>
-                            </div><!-- End .col-sm-6 -->
-                        </div><!-- End .row -->
+                  <div class="col-sm-6">
+                    <label>Address</label>
+                      <input type="name" class="form-control" v-model="location.address" required>
+                  </div><!-- End .col-sm-6 -->
+                </div><!-- End .row -->
 
-                        <div class="row row-sm">
-                            <div class="col-sm-6">
-                                <label>Weblink</label>
-                                <input type="name" class="form-control" v-model="location.weblink" required>
-                            </div><!-- End .col-sm-6 -->
+                <div class="row row-sm">
+                  <div class="col-sm-6">
+                    <label>Weblink</label>
+                      <input type="name" class="form-control" v-model="location.weblink" required>
+                  </div><!-- End .col-sm-6 -->
 
-                            <div class="col-sm-6">
-                                <label>Image Url</label>
-                              <input type="name" class="form-control" v-model="location.image_url">
-                            </div><!-- End .col-sm-6 -->
-                        </div><!-- End .row -->
+                  <div class="col-sm-6">
+                    <label>Image Url</label>
+                    <input type="name" class="form-control" v-model="location.image_url">
+                  </div><!-- End .col-sm-6 -->
+                </div><!-- End .row -->
 
-                        <div class="row">
-                            <div class="col-xs-12">
-                                <label>Description</label>
-                                <textarea class="form-control" rows="6" placeholder="Tell us about your spot"></textarea>
-                            </div><!-- End .col-md-12 -->
-                        </div><!-- End .row -->
+                <div class="row">
+                  <div class="col-xs-12">
+                    <label>Description</label>
+                    <textarea class="form-control" v-model="location.description" rows="6" placeholder="Tell us about your spot"></textarea>
+                  </div><!-- End .col-md-12 -->
+                </div><!-- End .row -->
 
-                        <div class="mb5"></div><!-- margin -->
+                <div class="mb5"></div><!-- margin -->
 
-                        <input type="submit" class="btn btn-custom2 min-width" value="Submit">
-                    </form>
+                <input type="submit" class="btn btn-custom2 min-width" value="Submit">
+              </form>
 
-                    <div class="mb25"></div><!-- margin -->
-                </div><!-- End .col-xs-12 -->
-            </div><!-- End .row -->
-        </div><!--End .table-cell  -->
+              <div class="mb25"></div><!-- margin -->
+              </div><!-- End .col-xs-12 -->
+        </div><!-- End .row -->
+      </div><!--End .table-cell  -->
 
-        <div class="table-cell cell-map-container">
-            <div id="map" class="cell-map"></div><!-- End #map -->
-        </div><!-- End .table-cell -->
+      <div class="table-cell cell-map-container">
+        <div id="map" class="cell-map"></div><!-- End #map -->
+      </div><!-- End .table-cell -->
     </div><!-- End .table-row -->
   </div>
 </template>
@@ -116,7 +116,8 @@ export default {
         name: this.location.name,
         address: this.location.address,
         weblink: this.location.weblink,
-        image_url: this.location.image_url
+        image_url: this.location.image_url,
+        description: this.location.description
       };
       axios
         .patch("/api/locations/" + this.location.id, locationParams)

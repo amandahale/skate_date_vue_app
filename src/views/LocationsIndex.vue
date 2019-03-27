@@ -10,20 +10,32 @@
         <br>
         <br>
         <br>
+        <br>
+        <br>
+        <br>
+        <br>
       </div><!-- End .container -->
     </div><!-- End .page-header -->
 
+    <h4 class="text-center">Find a place to skate</h4>
+    <p class="lead text-center">
+        Skate Date is a platform service for skaters to add, browse, and save skate destinations in the Chicagoland area.
+    </p>
+
+<!--     HERE LIES THE SORT BAR. IMPLEMENT IT LATER.
     <div class="container-fluid text-center">
       <ul id="portfolio-filter">
         <li class="active"><a href="#" data-filter="*">All</a></li>
-        <li><a href="#" data-filter=".web-design">Web Design</a></li>
-        <li><a href="#" data-filter=".marketing">Marketing</a></li>
-        <li><a href="#" data-filter=".video">Video</a></li>
-        <li><a href="#" data-filter=".wordpress">Wordpress</a></li>
-        <li><a href="#" data-filter=".illustration">Illustration</a></li>
-        <li><a href="#" data-filter=".logo-design">Logo Design</a></li>
+        <li><a href="#">Indoor</a></li>
+        <li><a href="#">Outdoor</a></li>
+        <li><a href="#">Wheels</a></li>
+        <li><a href="#">Ice</a></li>
+        <li><a href="#">Distance</a></li>
+        <li><a href="#">Rating</a></li>
       </ul>
-    </div><!-- End .container-fluid -->
+    </div>End .container-fluid -->
+
+    <br><br><br>
 
     <div class="container-fluid">
       <div class="portfolio-row">

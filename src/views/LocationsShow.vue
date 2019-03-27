@@ -1,32 +1,11 @@
 <template>
   <div class="locations-show">
-    <!-- <div class="table-row">
-      <div class="table-cell cell-content bg-custom">
-        <div class="col-xs-12">
-          <h2 class="title-border gray text-white">{{ location.name }}</h2>
-          <img :src="location.image_url" :alt="location.name">
-          <h4 class="text-white">{{location.address}}</h4>
-    
-          <a class="text-white" :href="location.weblink">{{location.weblink}}</a><br>
 
-          <router-link class="text-white" v-bind:to="'/locations/' + location.id + '/edit'">Edit Location</router-link><br>
-
-          <router-link class="text-white" to="/">Back to all locations</router-link><br>
-
-          <button class="btn btn-custom2" v-if="location.favorite_id" v-on:click="unfavoriteLocation()">Unfavorite</button>
-          <button class="btn btn-custom2" v-else v-on:click="favoriteLocation()">Favorite</button>
-          <button class="btn btn-custom2" v-on:click="destroyLocation()">Delete</button>
-        </div>
-
-        <div class="mb25"></div>
-
-      </div>
-    </div> -->
 
 
     <div class="page-header custom2 text-center larger">
       <div class="container-fluid">
-        <h1>{{location.name}}</h1>
+        <h1><small>{{location.name}}</small></h1>
       </div><!-- End .container -->
     </div><!-- End .page-header -->
 
@@ -36,9 +15,10 @@
       <!-- <div class="table-cell cell-image">
         <img :src="location.image_url" alt="">
       </div> -->
-
-        <img :src="location.image_url">
-        </img> <!-- End .table-cell -->
+        <div class="table-cell cell-image" v-bind:style="'background-image: url('+ location.image_url +')'">
+          <!-- <img class="feature-img" :src="location.image_url">
+          </img> -->
+        </div> <!-- End .table-cell -->
 
         <div class="table-cell cell-content bg-dark text-muted">
             <div class="mb10"></div>
@@ -75,10 +55,25 @@
                         </div><!-- End .service-icon -->
                         <h3 class="service-title text-white"><a href="#">Website</a></h3>
                         <p><a class="text-white" :href="location.weblink">{{location.weblink}}</a></p>
-                    </div><!-- End .service -->
-                </div><!-- End .col-sm-6 -->
 
+                    </div><!-- End .service -->
+                </div><!-- End .col-sm-12 -->
             </div><!-- End .row -->
+            
+            <div class="row">
+
+                <div class="col-xs-6 text-right">
+                  <button class="btn btn-custom2" v-on:click="destroyLocation()">Delete</button>
+                </div>
+                
+                <div class="col-xs-6 text-left">
+                  <button class="btn btn-custom2" v-if="location.favorite_id" v-on:click="unfavoriteLocation()">Unfavorite</button>
+                  <button class="btn btn-custom2" v-else v-on:click="favoriteLocation()">Favorite</button>
+                </div>
+
+            </div>
+            
+
         </div><!--End .table-cell  -->
     </div><!-- End .table-row -->
 
@@ -130,6 +125,12 @@
                         <p>Skate Date here Saturday at 4pm?</p>
                     </div><!-- End .service -->
                 </div><!-- End .col-sm-6 -->
+
+                <div class="row col-sm-12 service">
+                  <router-link class="text-white text-center" v-bind:to="'/locations/' + location.id + '/edit'">Edit Location </router-link>/
+                  <router-link class="text-white center" v-bind:to="'/locations/' + location.id">Write a Review</router-link>
+                </div>
+                      
             </div><!-- End .row -->
         </div><!--End .table-cell  -->
 
@@ -145,9 +146,8 @@
 .page-header.custom2.text-center {
   margin: 0px;
 }
-img {
-  max-width: 100%;
-  height: auto;
+div.table-row {
+  overflow: hidden;
 }
 </style>
 

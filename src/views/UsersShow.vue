@@ -1,8 +1,5 @@
 <template>
-  <div class="users-show container-fluid">
-    <div class="container">
-
-<!--       <img v-if="isLoggedIn()" v-bind:src="'https://http.cat/' + status" alt=""> -->
+  <div class="users-show">
 
 <div class="page-header custom2 text-center larger">
   <div class="container-fluid">
@@ -10,6 +7,11 @@
     <h4>ready to shred?</h4>
   </div><!-- End .container -->
 </div><!-- End .page-header -->
+
+    <div class="container">
+
+<!--       <img v-if="isLoggedIn()" v-bind:src="'https://http.cat/' + status" alt=""> -->
+
 
       <ul>
         <li v-for="error in errors">{{ error }}</li>
